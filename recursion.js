@@ -37,4 +37,21 @@ const sumFunc = (numbersArray = [], sum = 0) => {
 
 }
 
-console.log(sumFunc([1, 2, 3, 4, 5]))
+// console.log(sumFunc([1, 2, 3, 4, 5]))
+
+const getMaxNumberOnList = (list = [], maxNumber) => {
+    if (Number.isNaN(+maxNumber)) {
+        maxNumber = list.shift()
+    }
+
+    if (list.length === 0) {
+        return maxNumber
+    }
+    const currentNumber = list.shift()
+
+    if (currentNumber > maxNumber) {
+        maxNumber = currentNumber
+    }
+    return getMaxNumberOnList(list, maxNumber)
+}
+console.log(getMaxNumberOnList([-1, -3, -2, -4, -5, 10, -1, 0]))
