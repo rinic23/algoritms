@@ -54,4 +54,4 @@ const getMaxNumberOnList = (list = [], maxNumber) => {
     }
     return getMaxNumberOnList(list, maxNumber)
 }
-console.log(getMaxNumberOnList([-1, -3, -2, -4, -5, 10, -1, 0]))
+// console.log(getMaxNumberOnList([-1, -3, -2, -4, -5, 10, -1, 0]))
