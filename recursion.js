@@ -25,4 +25,16 @@ const findKeyRecursion = (box, index = 1) => {
     return findKeyRecursion(box.box, newIndex)
 }
 
-console.log(findKeyRecursion(box))
+// console.log(findKeyRecursion(box))
+
+const sumFunc = (numbersArray = [], sum = 0) => {
+
+    if (numbersArray.length === 0) {
+        return sum
+    }
+    const newSum = sum + numbersArray.shift()
+    return sumFunc(numbersArray, newSum)
+
+}
+
+console.log(sumFunc([1, 2, 3, 4, 5]))
