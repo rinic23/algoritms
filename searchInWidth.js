@@ -35,3 +35,5 @@ const getMangoSeller = (graph) => {
 }
 
 console.log(getMangoSeller(graph))
+
+const {   } = graph
